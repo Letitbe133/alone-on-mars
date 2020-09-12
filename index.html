@@ -12,7 +12,7 @@
       
       <!-- Assets Management System -->
       <a-assets>
-        <img crossorigin="anonymous" id="gale-texture" src="https://cdn.glitch.com/942c2228-c76f-4e93-b4bd-452d36ee82c9%2FGale_texture_high_4096px.jpg?v=1599921975291" />
+        <img id="gale-texture" src="https://cdn.glitch.com/942c2228-c76f-4e93-b4bd-452d36ee82c9%2FGale_texture_high_4096px.jpg?v=1599921975291" crossorigin="anonymous"/>
         <a-asset-item id="gale-dem" src="https://cdn.glitch.com/942c2228-c76f-4e93-b4bd-452d36ee82c9%2FGale_HRSC_DEM_50m_300x285.bin?v=1599921984071"></a-asset-item>
       </a-assets>
       
@@ -23,7 +23,8 @@
       
       <!-- Terrain-->
       <a-entity
-        terrain-model="map: #gale-texture;
+        terrain-model="
+          map: #gale-texture;
           dem: #gale-dem;
           planeWidth: 2000;
           planeHeight: 1900;
