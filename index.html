@@ -8,7 +8,7 @@
     <script src="https://unpkg.com/aframe-terrain-model-component@1.0.0/dist/aframe-terrain-model-component.js"></script>
   </head>
   <body>
-    <a-scene background="color: #FAFAFA">
+    <a-scene renderer="antialias: true">
       
       <!-- Assets Management System -->
       <a-assets>
@@ -24,17 +24,25 @@
       <!-- Terrain-->
       <a-entity
         terrain-model="
-          map: #gale-texture;
-          dem: #gale-dem;
+          map: url(https://cdn.glitch.com/942c2228-c76f-4e93-b4bd-452d36ee82c9%2FGale_texture_high_4096px.jpg?v=1599921975291);
+          dem: url(https://cdn.glitch.com/942c2228-c76f-4e93-b4bd-452d36ee82c9%2FGale_HRSC_DEM_50m_300x285.bin?v=1599921984071);
           planeWidth: 2000;
           planeHeight: 1900;
           segmentsWidth: 299;
           segmentsHeight: 284;
           zPosition: 100;"
       ></a-entity>
- 
+      
+      <!-- Lights -->
+      <a-entity
+        light="type: directional; color: #ffffff; intensity: 0.75"
+      ></a-entity>
+      <a-entity light="type: ambient; color: #999999"></a-entity>
+      
       <!-- Sky -->
-      <a-sky color="orange"></a-sky>
+      <a-sky color="#ffd4a6" radius="5000"></a-sky>
+      
+      <!-- Monolith -->
       <a-box position="-1 0.5 -15" rotation="0 45 0" color="#000" width="4" height="9" depth="1" shadow></a-box>
     </a-scene>
   </body>
