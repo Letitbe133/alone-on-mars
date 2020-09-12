@@ -12,7 +12,8 @@
       
       <!-- Assets Management System -->
       <a-assets>
-        <a-asset-item id="yamlElevation" src="https://raw.githubusercontent.com/tangrams/terrain-demos/master/styles/terrarium-elevation.yaml" />
+        <a-asset-item id="texture" src="https://cdn.glitch.com/942c2228-c76f-4e93-b4bd-452d36ee82c9%2FGale_texture_high_4096px.jpg?v=1599921975291" />
+        <a-asset-item id="dem" src="https://cdn.glitch.com/942c2228-c76f-4e93-b4bd-452d36ee82c9%2FGale_HRSC_DEM_50m_300x285.bin?v=1599921984071" />
       </a-assets>
       
       <!-- Camera -->
@@ -22,8 +23,8 @@
       
       <!-- Terrain-->
       <a-entity
-        terrain-model="map: url(data/noctis-3500-clip-textureRED-resized.jpg);
-          dem: url(data/noctis-3500-clip-envi.bin);
+        terrain-model="map: #texture;
+          dem: #dem;
           planeWidth: 346;
           planeHeight: 346;
           segmentsWidth: 199;
