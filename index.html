@@ -9,7 +9,7 @@
     <script src="https://cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.js"></script>
   </head>
   <body>
-    <a-scene renderer="antialias: true" shadow="type: pcfsoft" physics="debug: true">
+    <a-scene renderer="antialias: true" shadow="type: pcfsoft" physics="debug: true; gravity: -9.8;">
       
       <!-- Assets Management System -->
       <a-assets>
@@ -25,7 +25,7 @@
       </a-assets>
 
       <!-- Camera -->
-      <a-entity position="0 1.6 0" rotation="0 -93 0" dynamic-body="velocity: 10;">
+      <a-entity position="0 1.6 0" rotation="0 -93 0">
         <a-entity camera look-controls wasd-controls></a-entity>
       </a-entity>
 
@@ -64,7 +64,7 @@
       ></a-entity>-->
 
       <!-- Martian Sphere -->
-      <!--<a-sphere src="https://cdn.glitch.com/942c2228-c76f-4e93-b4bd-452d36ee82c9%2FMars_G%C3%A9olocalisation.jpg?v=1599989507182" position="0 15 -20"></a-sphere>-->
+      <a-sphere dynamic-body src="https://cdn.glitch.com/942c2228-c76f-4e93-b4bd-452d36ee82c9%2FMars_G%C3%A9olocalisation.jpg?v=1599989507182" position="0 15 -20"></a-sphere>
 
       <!-- Sky -->
       <a-sky color="#C6A17D" radius="5000"></a-sky>
