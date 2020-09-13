@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Alone on Mars !</title>
-    <meta name="description" content="Alone on Mars">
+    <meta name="description" content="Alone on Mars" />
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-terrain-model-component@1.0.0/dist/aframe-terrain-model-component.js"></script>
   </head>
   <body>
     <a-scene renderer="antialias: true" shadow="type: pcfsoft">
-      
       <!-- Assets Management System -->
       <a-assets>
-        <img id="gale-texture" src="https://cdn.glitch.com/942c2228-c76f-4e93-b4bd-452d36ee82c9%2FGale_texture_high_4096px.jpg?v=1599921975291" crossorigin="anonymous"/>
-        <a-asset-item id="gale-dem" src="https://cdn.glitch.com/942c2228-c76f-4e93-b4bd-452d36ee82c9%2FGale_HRSC_DEM_50m_300x285.bin?v=1599921984071"></a-asset-item>
+        <img
+          id="gale-texture"
+          src="https://cdn.glitch.com/942c2228-c76f-4e93-b4bd-452d36ee82c9%2FGale_texture_high_4096px.jpg?v=1599921975291"
+          crossorigin="anonymous"
+        />
+        <a-asset-item
+          id="gale-dem"
+          src="https://cdn.glitch.com/942c2228-c76f-4e93-b4bd-452d36ee82c9%2FGale_HRSC_DEM_50m_300x285.bin?v=1599921984071"
+        ></a-asset-item>
       </a-assets>
-      
+
       <!-- Camera -->
       <a-entity position="0 1.6 0">
         <a-entity camera look-controls wasd-controls></a-entity>
       </a-entity>
-      
+
       <!-- Light -->
       <!--<a-entity light="color: #AFA; intensity: 1.5; type: point;" position="30 300 5000" shadow="castShadow: true;"></a-entity>-->
-      
+
       <!-- Terrain-->
       <a-entity
         terrain-model="
@@ -34,30 +40,51 @@
           segmentsWidth: 299;
           segmentsHeight: 284;
           zPosition: 100;"
-          position="0 -23 -200"
+        position="0 -23 -200"
         shadow="receive: true;"
       ></a-entity>
-      
+
       <!-- Lights -->
       <a-entity
-        light="type: directional; color: #AFA; intensity: 0.7; castShadow: true; shadowCameraVisible: true;" position="30 300 5000"
+        light="type: directional; color: #AFA; intensity: 0.7; castShadow: true; shadowCameraVisible: true;"
+        position="30 300 5000"
       ></a-entity>
       <a-entity light="type: ambient; color: #999999"></a-entity>
-      
+
       <!-- Sun Sphere -->
-      <a-entity geometry="primitive: sphere; radius: 5;" fog="type:linear; color: yellow;" material="color: yellow; shader: standard;" position="1 15 -15" shadow="cast: true;"></a-entity>
-      
-      
+      <a-entity
+        geometry="primitive: sphere; radius: 5;"
+        fog="type:linear; color: yellow;"
+        material="color: yellow; shader: standard;"
+        position="1 15 -15"
+        shadow="cast: true;"
+      ></a-entity>
+
       <!-- Martian Sphere -->
       <!--<a-sphere src="https://cdn.glitch.com/942c2228-c76f-4e93-b4bd-452d36ee82c9%2FMars_G%C3%A9olocalisation.jpg?v=1599989507182" position="0 15 -20"></a-sphere>-->
-      
+
       <!-- Sky -->
       <a-sky color="#C6A17D" radius="5000"></a-sky>
-      
+
       <!-- Monolith -->
-      <a-box position="-1 5 -15" rotation="0 45 0" color="#000" width="4" height="9" depth="1" shadow="cast: true;"></a-box>
-      
-      <a-plane color="#ccc" material="color:white" position="1 1 -15" shadow="receive: true;" rotation="-90 0 0" scale="30 30 30"></a-plane>
+      <a-box
+        position="-1 5 -15"
+        rotation="0 45 0"
+        color="#000"
+        width="4"
+        height="9"
+        depth="1"
+        shadow="cast: true;"
+      ></a-box>
+
+      <a-plane
+        color="#ccc"
+        material="color:white; shader: standard;"
+        position="1 1 -15"
+        shadow="receive: true;"
+        rotation="-90 0 0"
+        scale="30 30 30"
+      ></a-plane>
     </a-scene>
   </body>
 </html>
