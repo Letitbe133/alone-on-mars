@@ -54,8 +54,7 @@
       <!-- Sun Sphere -->
       <a-entity
         geometry="primitive: sphere; radius: 5;"
-        fog="type:linear; color: yellow;"
-        material="color: yellow; shader: standard;"
+        material="color: yellow;"
         position="1 15 -15"
         shadow="cast: true;"
       ></a-entity>
@@ -75,14 +74,14 @@
         height="9"
         depth="1"
         shadow="cast: true;"
-        material="color: #000;"
+        material="color: #000; shader: standard;"
       ></a-box>
 
       <a-box
         color="#ccc"
         material="color:white; shader: standard;"
-        position="1 0.5 -15"
-        shadow="receive: true;"
+        position="1 1 -15"
+        shadow="receive: true; cast: true;"
         rotation="-90 0 0"
         scale="30 30 0.5"
       ></a-box>
