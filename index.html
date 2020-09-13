@@ -6,9 +6,10 @@
     <meta name="description" content="Alone on Mars" />
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-terrain-model-component@1.0.0/dist/aframe-terrain-model-component.js"></script>
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.js"></script>
   </head>
   <body>
-    <a-scene renderer="antialias: true" shadow="type: pcfsoft">
+    <a-scene renderer="antialias: true" shadow="type: pcfsoft" physics="debug: true">
       <!-- Assets Management System -->
       <a-assets>
         <img
@@ -42,6 +43,7 @@
           zPosition: 100;"
         position="0 -23 -200"
         shadow="receive: true;"
+        static-body="shape: box;"
       ></a-entity>
 
       <!-- Lights -->
