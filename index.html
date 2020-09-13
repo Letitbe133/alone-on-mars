@@ -8,7 +8,7 @@
     <script src="https://unpkg.com/aframe-terrain-model-component@1.0.0/dist/aframe-terrain-model-component.js"></script>
   </head>
   <body>
-    <a-scene renderer="antialias: true">
+    <a-scene renderer="antialias: true" shadow="type: pcfsoft">
       
       <!-- Assets Management System -->
       <a-assets>
@@ -35,17 +35,19 @@
           segmentsHeight: 284;
           zPosition: 100;"
           position="0 -23 -200"
+        shadow="receive: true;"
       ></a-entity>
       
       <!-- Lights -->
       <a-entity
-        light="type: point; color: #AFA; intensity: 1.5;" position="30 300 5000" shadow="castShadows: true;"
+        light="type: directional; color: #AFA; intensity: 0.7; castShadow: true; shadowCameraVisible: true;" position="30 300 5000"
       ></a-entity>
       <a-entity light="type: ambient; color: #999999"></a-entity>
       
       <!-- Sun Sphere -->
       <a-entity geometry="primitive: sphere; radius: 5;" fog="type:linear; color: yellow;" material="color: yellow; shader: standard;" position="1 15 -15" shadow="cast: true;"></a-entity>
       
+      <a-plane color="#ccc" position="1 1 -15" shadow="receive: true;" rotation="90 0 0"></a-plane>
       <!-- Martian Sphere -->
       <!--<a-sphere src="https://cdn.glitch.com/942c2228-c76f-4e93-b4bd-452d36ee82c9%2FMars_G%C3%A9olocalisation.jpg?v=1599989507182" position="0 15 -20"></a-sphere>-->
       
