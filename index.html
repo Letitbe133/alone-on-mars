@@ -29,9 +29,6 @@
         <a-entity camera look-controls wasd-controls></a-entity>
       </a-entity>
 
-      <!-- Light -->
-      <!--<a-entity light="color: #AFA; intensity: 1.5; type: point;" position="30 300 5000" shadow="castShadow: true;"></a-entity>-->
-
       <!-- Terrain-->
       <a-entity
         terrain-model="
@@ -54,19 +51,10 @@
       ></a-entity>
       <a-entity light="type: ambient; color: #999999"></a-entity>
 
-      <!-- Sun Sphere -->
-      <!--
-      <a-entity
-        geometry="primitive: sphere; radius: 5;"
-        material="color: yellow;"
-        position="6 15 -15"
-        shadow="cast: true;"
-      ></a-entity>-->
-
       <!-- Martian Sphere -->
-      <a-sphere dynamic-body src="https://cdn.glitch.com/942c2228-c76f-4e93-b4bd-452d36ee82c9%2FMars_G%C3%A9olocalisation.jpg?v=1599989507182" position="25 10 0"></a-sphere>
+      <a-sphere dynamic-body src="https://cdn.glitch.com/942c2228-c76f-4e93-b4bd-452d36ee82c9%2FMars_G%C3%A9olocalisation.jpg?v=1599989507182" position="24.5 15 -5"></a-sphere>
       
-      <a-box position="25 1 -5" width="5" height="5" depth="0.5" rotation="-90 0 0" color="#ccc"></a-box>
+      <a-box position="25 1 -5" width="5" height="5" depth="0.5" rotation="-90 0 0" color="#ccc" static-body></a-box>
 
       <!-- Sky -->
       <a-sky color="#C6A17D" radius="5000"></a-sky>
@@ -83,15 +71,6 @@
         material="color: #000; shader: standard;"
       ></a-box>
 
-      <!--
-      <a-box
-        color="#ccc"
-        material="color:white; shader: standard;"
-        position="1 1 -15"
-        shadow="receive: true; cast: true;"
-        rotation="-90 0 0"
-        scale="30 30 0.5"
-      ></a-box>-->
     </a-scene>
   </body>
 </html>
