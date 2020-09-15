@@ -9,7 +9,7 @@
     <script src="https://cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.js"></script>
   </head>
   <body>
-    <a-scene renderer="antialias: true" shadow="type: pcfsoft" physics="debug: true; gravity: -3.7;">
+    <a-scene shadow="type: pcfsoft" physics="debug: true; gravity: -3.7;">
       
       <!-- Assets Management System -->
       <a-assets>
@@ -26,7 +26,9 @@
 
       <!-- Camera -->
       <a-entity position="0 1.6 0" rotation="0 -93 0">
-        <a-entity camera look-controls wasd-controls></a-entity>
+        <a-entity camera look-controls wasd-controls>
+          <a-cursor></a-cursor>
+        </a-entity>
       </a-entity>
 
       <!-- Terrain-->
@@ -70,6 +72,8 @@
         shadow="cast: true;"
         material="color: #000; shader: standard;"
       ></a-box>
+      
+      <a-plane position="0 0 5" rotation="-110 0 0" color="#ccc" width="2" height="10" depth="0.5" static-body></a-plane>
 
     </a-scene>
   </body>
