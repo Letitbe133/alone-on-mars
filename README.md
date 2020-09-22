@@ -1,6 +1,5 @@
-# A-Frame Project
+# VR experiments with A-Frame
 
-**[Subscribe to the A-Frame newsletter!](https://aframe.io/subscribe/)**
 
 Built with [A-Frame](https://aframe.io), a web framework for building virtual reality experiences.
 
