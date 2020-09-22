@@ -1,1 +1,1 @@
-# VR experimenys with a-frame framework
+# VR experiments with a-frame framework
